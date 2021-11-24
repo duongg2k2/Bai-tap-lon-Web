@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK NOW</title>
+    <link rel="stylesheet" href="./book.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+<body>
+    <p class = "message hidden">Đặt phòng thành công !</p>
+    <div class="main">
+        <form action="" class="form" id="form-1">
+            <div class="auth-form">
+                <div class="form__container">
+                    <div class="form__header">
+                        <h3 class="form-title">
+                            Đặt phòng
+                        </h3>
+                        <span class="form-exit"></span>
+                    </div>
+                </div>                   
+            </div>
+            <div class="form">
+                <div class="form__group">
+                    <label for="fullname" class="form-label">Họ và tên</label>
+                    <input id="fullname" name="fullname" class="form__input" type="text"  placeholder="VD Uchihahaha Itachi">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <label for="phonenumber" class="form-label">Số điện thoại</label>
+                    <input id="phonenumber" name="phonenumber" class="form__input" type="text" placeholder="VD 0999333111">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <label for="" class="form-label">Số người</label>
+                    <select class="form__select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>	
+                </div>
+                <div class="form__group">
+                    <label for="fullname" class="form-label">Phòng muốn đặt</label>
+                    <select class="form__select">
+                        <option>LUXURY</option>
+                        <option>STANDARD</option>
+                        <option>DELUXE</option>
+                    </select>	
+                </div>
+                <div class="form__group">
+                    <label for="fullname" class="form-label">Ngày nhận phòng</label>
+                    <input type="date"  id ="date" class="form__input" placeholder="Ngày nhận phòng">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <label for="fullname" class="form-label">Ngày trả phòng</label>
+                    <input type="date" class="form__input" placeholder="Ngày trả phòng">
+                    <span></span>
+                    <span class="form-message"></span>
+                </div>
+            </div>              
+            <input type="submit" name="ĐẶT PHÒNG" value="Đặt phòng ngay"  class="btns">
+            <div class="btns">
+                <a href="./hotel.html" class="info">Trở lại</a>
+            </div>
+        </form>     
+    </div>
+    <script src="./validator.js"></script>
+    <script>
+
+        Validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname'),
+                Validator.isPhoneNumber('#phonenumber'),
+                Validator.isDate('#date'),
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
+        });
+
+    </script>
+</body>
+</html>

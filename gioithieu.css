@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background-color: rgb(233, 204, 88);
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+/*header-Dũng*/
+header{
+    height: 500px;
+    background-image: url(./img/background-img.jpg);
+    background-size: 100%;
+    background-position:inherit;
+    background-repeat: no-repeat;
+}
+.logo{
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
+    padding-top: 20px;
+
+}
+header h1{
+    color:rgb(198, 108, 12);
+    text-align: center;
+    padding-top: 35px;
+    font-weight:bolder;
+    font-size: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+header p {
+    color:rgb(235, 194, 124);
+    text-align: center;
+    padding-top: 5px;
+    font-size:30px;
+
+}
+.nav-item:hover{
+    background-color:rgb(231, 231, 142);
+  
+}
+/**/
+.about_container-fluid{
+    padding: 40px 50px;
+}
+.about_container-fluid h2{
+    text-align: center;
+} 
+.about{
+    margin:40px 0;
+    padding: 20px 20px;
+    background-color: bisque;
+    display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}      
+.about_content{
+    padding: 5px 20px;
+    flex: 1;
+}
+.about_content h2{
+    font-size: 25px;
+    margin: 15px 0;
+}
+.about_content  p{
+    font-size: 15px;
+}
+.about_image{
+    overflow: hidden;
+}
+.about_image img{
+    transition: var(--transition);
+    
+}
+.about_image:hover img{
+    transform: scale(1.1);
+}
+/*member*/
+.table{
+    padding: 30px 50px;
+}
+.card-info{
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none !important;
+    color: black;
+}
+.img img{
+    width: 300px;
+    height: 220px;
+    padding: 20px;
+    object-fit: cover !important;
+}
+.info{
+    padding-left: 15px;
+}
+.info p{
+    margin-bottom: 0;
+    padding: 0;
+}
+@media (max-width:700px){
+    .table{
+        padding: 45px;
+        margin: 10px;
+    }
+    .card-info{
+        display: block;
+        padding: 20px 20px;
+    }
+    .img img{
+        padding-left:40px;
+    }
+}
+h2{
+    text-align: center;
+}
+/*footer*/
+.fa-facebook {
+	color: #3b5998;
+}
+.fa-twitter {
+	color: #00aced;	
+}
+.fa-google-plus-g {
+	color: #dd4b39;
+}
+.fa-instagram {
+	color: #517fa4;
+}
+.fa-youtube {
+	color: #bb0000;
+}
+footer {
+	background-color: RGBA( 218, 165, 32, 1 );
+	color: #d5d5d5;
+}
+hr.light {
+	border-top: 1px solid #d5d5d5;
+	width: 100%;
+}
+.light-100 {
+	border-top: 1px solid #d5d5d5;
+	width: 100%;
+}
+
